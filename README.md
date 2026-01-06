@@ -4,7 +4,18 @@
 
 In today’s digital world, misinformation spreads faster than ever. The **Fake News Detection App** is an AI-powered system that uses **Machine Learning (ML)** and **Natural Language Processing (NLP)** to determine whether a news article is **Real** or **Fake** based solely on its textual content.
 
-The application is built using **Python**, **Scikit-learn**, and **Streamlit**, offering a clean, simple, and interactive interface. Users can paste or type news content and receive instant predictions, making the app useful for students, researchers, and anyone concerned about the credibility of online information.
+Built using **Python**, **Scikit-learn**, and **Streamlit**, the application provides a clean, modern, and interactive interface. Users can paste or type a news article and instantly receive predictions, making the app useful for students, researchers, and anyone concerned about online misinformation.
+
+---
+
+## 🖼️ Application Interface
+
+### Initial User Interface
+<p align="center">
+  <img src="assets/main_interface.png" width="800"/>
+</p>
+
+The interface allows users to enter a news article into a text box and submit it for analysis using a single click.
 
 ---
 
@@ -25,31 +36,51 @@ The application follows a structured data science workflow to ensure meaningful 
 
 ### Dataset
 
-The model is trained on two well-curated datasets:
-- **True.csv** – Contains verified and factual news articles  
-- **Fake.csv** – Contains misleading or fabricated news articles  
+The model is trained on two curated datasets:
+- **True.csv** – Verified and factual news articles  
+- **Fake.csv** – Misleading or fabricated news articles  
 
 ### Text Preprocessing Pipeline
 
-Each input article undergoes several preprocessing steps before prediction:
-- Lowercasing to eliminate case sensitivity  
+Each input article undergoes multiple preprocessing steps:
+- Lowercasing to remove case sensitivity  
 - Removal of punctuation and special characters  
 - Stop-word removal to eliminate common but uninformative words  
 - Stemming or lemmatization to reduce words to their root forms  
 
 ### Feature Extraction and Prediction
 
-The cleaned text is transformed using **TF-IDF (Term Frequency–Inverse Document Frequency)** into numerical vectors. These vectors are then processed by a **Logistic Regression** model, which identifies statistical patterns associated with Real and Fake news and produces the final prediction.
+The cleaned text is transformed using **TF-IDF (Term Frequency–Inverse Document Frequency)** into numerical vectors. These vectors are passed into a **Logistic Regression** model that identifies statistical patterns associated with Real and Fake news.
+
+---
+
+## 🧪 Prediction Results
+
+### Fake News Detection Result
+<p align="center">
+  <img src="assets/fake_news.png" width="800"/>
+</p>
+
+When the input article contains misleading or fabricated patterns, the system clearly highlights the result as **Fake News**.
+
+---
+
+### Real News Detection Result
+<p align="center">
+  <img src="assets/real_news.png" width="800"/>
+</p>
+
+Articles that follow factual reporting patterns are classified as **Real News** and displayed accordingly.
 
 ---
 
 ## 🖥️ User Workflow
 
 1. Paste a news article or headline into the input text box  
-2. Click the **Predict** button  
+2. Click the **Check News** button  
 3. View the classification result:
-   - 🟢 **Real News** – Indicates factual reporting patterns  
-   - 🔴 **Fake News** – Indicates misinformation patterns  
+   - 🟢 **Real News** – Indicates factual reporting  
+   - 🔴 **Fake News** – Indicates misinformation  
 
 ---
 
@@ -69,7 +100,7 @@ The cleaned text is transformed using **TF-IDF (Term Frequency–Inverse Documen
 - Addition of confidence scores for predictions  
 - Support for news URL-based detection  
 - Multi-language fake news detection  
-- Enhanced UI with analytics and explainable AI features  
+- Improved UI with analytics and explainable AI features  
 
 ---
 
